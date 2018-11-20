@@ -1,0 +1,22 @@
+{
+  "drugstoreApp": {
+    "producer": {
+      "home": {
+        "title": "Producers",
+        "createLabel": "Create a new Producer",
+        "createOrEditLabel": "Create or edit a Producer"
+      },
+      "created": "A new Producer is created with identifier {{ param }}",
+      "updated": "A Producer is updated with identifier {{ param }}",
+      "deleted": "A Producer is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Producer {{ id }}?"
+      },
+      "detail": {
+        "title": "Producer"
+      },
+      "name": "Name",
+      "description": "Description"
+    }
+  }
+}

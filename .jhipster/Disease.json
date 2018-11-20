@@ -1,0 +1,37 @@
+{
+    "name": "Disease",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "drugs",
+            "otherEntityName": "drug",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "diseases"
+        }
+    ],
+    "changelogDate": "20181119170321",
+    "entityTableName": "disease",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

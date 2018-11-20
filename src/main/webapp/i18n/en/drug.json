@@ -1,0 +1,30 @@
+{
+  "drugstoreApp": {
+    "drug": {
+      "home": {
+        "title": "Drugs",
+        "createLabel": "Create a new Drug",
+        "createOrEditLabel": "Create or edit a Drug"
+      },
+      "created": "A new Drug is created with identifier {{ param }}",
+      "updated": "A Drug is updated with identifier {{ param }}",
+      "deleted": "A Drug is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Drug {{ id }}?"
+      },
+      "detail": {
+        "title": "Drug"
+      },
+      "name": "Name",
+      "form": "Form",
+      "dose": "Dose",
+      "packaging": "Packaging",
+      "price": "Price",
+      "rating": "Rating",
+      "description": "Description",
+      "substitute": "Substitute",
+      "producer": "Producer",
+      "diseases": "Diseases"
+    }
+  }
+}

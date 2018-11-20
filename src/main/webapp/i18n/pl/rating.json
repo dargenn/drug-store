@@ -1,0 +1,10 @@
+{
+  "drugstoreApp": {
+    "Rating": {
+      "null": "",
+      "BAD": "BAD",
+      "NEUTRAL": "NEUTRAL",
+      "GOOD": "GOOD"
+    }
+  }
+}

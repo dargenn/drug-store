@@ -1,0 +1,23 @@
+{
+  "drugstoreApp": {
+    "disease": {
+      "home": {
+        "title": "Disease",
+        "createLabel": "Dodaj Disease",
+        "createOrEditLabel": "Dodaj lub edytuj: Disease"
+      },
+      "created": "Utworzono nowy obiekt typu Disease z identyfikatorem {{ param }}",
+      "updated": "Uaktualniono obiekt typu Disease z identyfikatorem {{ param }}",
+      "deleted": "Usunięto obiekt typu Disease z identyfikatorem {{ param }}",
+      "delete": {
+        "question": "Czy na pewno chcesz usunąć Disease {{ id }}?"
+      },
+      "detail": {
+        "title": "Disease"
+      },
+      "name": "Name",
+      "description": "Description",
+      "drugs": "Drugs"
+    }
+  }
+}

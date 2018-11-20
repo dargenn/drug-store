@@ -1,0 +1,11 @@
+{
+  "drugstoreApp": {
+    "Form": {
+      "null": "",
+      "TABLET": "TABLET",
+      "SOLUTION": "SOLUTION",
+      "CAPSULE": "CAPSULE",
+      "PILL": "PILL"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Drug.
+    -->
+    <changeSet id="20181119170319-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="substitute_id"
+                                 baseTableName="drug"
+                                 constraintName="fk_drug_substitute_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="drug"/>
+
+        <addForeignKeyConstraint baseColumnNames="drugs_id"
+                                 baseTableName="drug_producer"
+                                 constraintName="fk_drug_producer_drugs_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="drug"/>
+        <addForeignKeyConstraint baseColumnNames="producers_id"
+                                 baseTableName="drug_producer"
+                                 constraintName="fk_drug_producer_producers_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="producer"/>
+        
+        <addForeignKeyConstraint baseColumnNames="drugs_id"
+                                 baseTableName="drug_diseases"
+                                 constraintName="fk_drug_diseases_drugs_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="drug"/>
+        <addForeignKeyConstraint baseColumnNames="diseases_id"
+                                 baseTableName="drug_diseases"
+                                 constraintName="fk_drug_diseases_diseases_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="disease"/>
+        
+    </changeSet>
+</databaseChangeLog>

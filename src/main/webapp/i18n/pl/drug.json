@@ -1,0 +1,30 @@
+{
+  "drugstoreApp": {
+    "drug": {
+      "home": {
+        "title": "Drug",
+        "createLabel": "Dodaj Drug",
+        "createOrEditLabel": "Dodaj lub edytuj: Drug"
+      },
+      "created": "Utworzono nowy obiekt typu Drug z identyfikatorem {{ param }}",
+      "updated": "Uaktualniono obiekt typu Drug z identyfikatorem {{ param }}",
+      "deleted": "Usunięto obiekt typu Drug z identyfikatorem {{ param }}",
+      "delete": {
+        "question": "Czy na pewno chcesz usunąć Drug {{ id }}?"
+      },
+      "detail": {
+        "title": "Drug"
+      },
+      "name": "Name",
+      "form": "Form",
+      "dose": "Dose",
+      "packaging": "Packaging",
+      "price": "Price",
+      "rating": "Rating",
+      "description": "Description",
+      "substitute": "Substitute",
+      "producer": "Producer",
+      "diseases": "Diseases"
+    }
+  }
+}
