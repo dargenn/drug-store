@@ -1,0 +1,42 @@
+entity Drug {
+	name String required,
+    form Form required,
+    dose String required,
+    packaging String required,
+    price BigDecimal required,
+    rating Rating,
+    description String
+}
+
+enum Form {
+	TABLET, SOLUTION, CAPSULE, PILL
+}
+
+enum Rating {
+	BAD, NEUTRAL, GOOD
+}
+
+entity Producer {
+	name String required,
+    description String required
+}
+
+entity Disease {
+	name String required,
+    description String required
+}
+
+relationship ManyToMany {
+	Drug{producer} to Producer
+}
+
+relationship OneToOne {
+	Drug{substitute(name)} to Drug
+}
+
+relationship ManyToMany {
+	Drug{diseases(name)} to Disease{drugs(name)}
+}
+
+paginate Drug, Producer with infinite-scroll
+service all with serviceImpl

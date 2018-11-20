@@ -1,0 +1,17 @@
+import './footer.css';
+
+import React from 'react';
+import { Translate } from 'react-jhipster';
+import { Col, Row } from 'reactstrap';
+
+const Footer = props => (
+  <div className="footer page-content">
+    <Row>
+      <Col md="12">
+        <p>&copy;2018 Monika, Karolina, Piotr, Michał</p>
+      </Col>
+    </Row>
+  </div>
+);
+
+export default Footer;
