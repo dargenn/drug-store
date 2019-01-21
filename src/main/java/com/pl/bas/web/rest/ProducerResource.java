@@ -23,9 +23,6 @@ import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Optional;
 
-/**
- * REST controller for managing Producer.
- */
 @RestController
 @RequestMapping("/api")
 public class ProducerResource {
@@ -40,13 +37,6 @@ public class ProducerResource {
         this.producerService = producerService;
     }
 
-    /**
-     * POST  /producers : Create a new producer.
-     *
-     * @param producer the producer to create
-     * @return the ResponseEntity with status 201 (Created) and with body the new producer, or with status 400 (Bad Request) if the producer has already an ID
-     * @throws URISyntaxException if the Location URI syntax is incorrect
-     */
     @PostMapping("/producers")
     @Timed
     public ResponseEntity<Producer> createProducer(@Valid @RequestBody Producer producer) throws URISyntaxException {
@@ -60,15 +50,6 @@ public class ProducerResource {
             .body(result);
     }
 
-    /**
-     * PUT  /producers : Updates an existing producer.
-     *
-     * @param producer the producer to update
-     * @return the ResponseEntity with status 200 (OK) and with body the updated producer,
-     * or with status 400 (Bad Request) if the producer is not valid,
-     * or with status 500 (Internal Server Error) if the producer couldn't be updated
-     * @throws URISyntaxException if the Location URI syntax is incorrect
-     */
     @PutMapping("/producers")
     @Timed
     public ResponseEntity<Producer> updateProducer(@Valid @RequestBody Producer producer) throws URISyntaxException {
@@ -82,12 +63,6 @@ public class ProducerResource {
             .body(result);
     }
 
-    /**
-     * GET  /producers : get all the producers.
-     *
-     * @param pageable the pagination information
-     * @return the ResponseEntity with status 200 (OK) and the list of producers in body
-     */
     @GetMapping("/producers")
     @Timed
     public ResponseEntity<List<Producer>> getAllProducers(Pageable pageable) {
@@ -97,12 +72,6 @@ public class ProducerResource {
         return ResponseEntity.ok().headers(headers).body(page.getContent());
     }
 
-    /**
-     * GET  /producers/:id : get the "id" producer.
-     *
-     * @param id the id of the producer to retrieve
-     * @return the ResponseEntity with status 200 (OK) and with body the producer, or with status 404 (Not Found)
-     */
     @GetMapping("/producers/{id}")
     @Timed
     public ResponseEntity<Producer> getProducer(@PathVariable Long id) {
@@ -111,12 +80,6 @@ public class ProducerResource {
         return ResponseUtil.wrapOrNotFound(producer);
     }
 
-    /**
-     * DELETE  /producers/:id : delete the "id" producer.
-     *
-     * @param id the id of the producer to delete
-     * @return the ResponseEntity with status 200 (OK)
-     */
     @DeleteMapping("/producers/{id}")
     @Timed
     public ResponseEntity<Void> deleteProducer(@PathVariable Long id) {

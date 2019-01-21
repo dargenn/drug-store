@@ -9,11 +9,6 @@ import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.time.LocalDate;
 
-/**
- * Persistent tokens are used by Spring Security to automatically log in users.
- *
- * @see com.pl.bas.security.PersistentTokenRememberMeServices
- */
 @Entity
 @Table(name = "jhi_persistent_token")
 public class PersistentToken implements Serializable {
@@ -33,7 +28,6 @@ public class PersistentToken implements Serializable {
     @Column(name = "token_date")
     private LocalDate tokenDate;
 
-    //an IPV6 address max length is 39 characters
     @Size(min = 0, max = 39)
     @Column(name = "ip_address", length = 39)
     private String ipAddress;

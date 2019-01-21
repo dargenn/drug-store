@@ -18,9 +18,6 @@ import java.util.Objects;
 import java.util.Set;
 import java.time.Instant;
 
-/**
- * A user.
- */
 @Entity
 @Table(name = "jhi_user")
 

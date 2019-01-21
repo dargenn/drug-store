@@ -12,9 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.Optional;
 
-/**
- * Service Implementation for managing Disease.
- */
 @Service
 @Transactional
 public class DiseaseServiceImpl implements DiseaseService {
@@ -27,23 +24,12 @@ public class DiseaseServiceImpl implements DiseaseService {
         this.diseaseRepository = diseaseRepository;
     }
 
-    /**
-     * Save a disease.
-     *
-     * @param disease the entity to save
-     * @return the persisted entity
-     */
     @Override
     public Disease save(Disease disease) {
         log.debug("Request to save Disease : {}", disease);
         return diseaseRepository.save(disease);
     }
 
-    /**
-     * Get all the diseases.
-     *
-     * @return the list of entities
-     */
     @Override
     @Transactional(readOnly = true)
     public List<Disease> findAll() {
@@ -52,12 +38,6 @@ public class DiseaseServiceImpl implements DiseaseService {
     }
 
 
-    /**
-     * Get one disease by id.
-     *
-     * @param id the id of the entity
-     * @return the entity
-     */
     @Override
     @Transactional(readOnly = true)
     public Optional<Disease> findOne(Long id) {
@@ -65,11 +45,6 @@ public class DiseaseServiceImpl implements DiseaseService {
         return diseaseRepository.findById(id);
     }
 
-    /**
-     * Delete the disease by id.
-     *
-     * @param id the id of the entity
-     */
     @Override
     public void delete(Long id) {
         log.debug("Request to delete Disease : {}", id);

@@ -14,10 +14,6 @@ import javax.persistence.Column;
 import javax.persistence.EntityListeners;
 import javax.persistence.MappedSuperclass;
 
-/**
- * Base abstract class for entities which will hold definitions for created, last modified by and created,
- * last modified by date.
- */
 @MappedSuperclass
 @Audited
 @EntityListeners(AuditingEntityListener.class)

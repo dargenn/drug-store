@@ -11,9 +11,6 @@ import java.util.List;
 import java.util.Optional;
 import java.time.Instant;
 
-/**
- * Spring Data JPA repository for the User entity.
- */
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 

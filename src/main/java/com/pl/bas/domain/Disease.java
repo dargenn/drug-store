@@ -10,9 +10,6 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.Objects;
 
-/**
- * A Disease.
- */
 @Entity
 @Table(name = "disease")
 public class Disease implements Serializable {

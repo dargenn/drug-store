@@ -27,9 +27,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-/**
- * REST controller for managing Drug.
- */
 @RestController
 @RequestMapping("/api")
 public class DrugResource {
@@ -51,13 +48,6 @@ public class DrugResource {
         this.userService = userService;
     }
 
-    /**
-     * POST  /drugs : Create a new drug.
-     *
-     * @param drug the drug to create
-     * @return the ResponseEntity with status 201 (Created) and with body the new drug, or with status 400 (Bad Request) if the drug has already an ID
-     * @throws URISyntaxException if the Location URI syntax is incorrect
-     */
     @PostMapping("/drugs")
     @Timed
     public ResponseEntity<Drug> createDrug(@Valid @RequestBody Drug drug) throws URISyntaxException {
@@ -71,15 +61,6 @@ public class DrugResource {
             .body(result);
     }
 
-    /**
-     * PUT  /drugs : Updates an existing drug.
-     *
-     * @param drug the drug to update
-     * @return the ResponseEntity with status 200 (OK) and with body the updated drug,
-     * or with status 400 (Bad Request) if the drug is not valid,
-     * or with status 500 (Internal Server Error) if the drug couldn't be updated
-     * @throws URISyntaxException if the Location URI syntax is incorrect
-     */
     @PutMapping("/drugs")
     @Timed
     public ResponseEntity<Drug> updateDrug(@Valid @RequestBody Drug drug) throws URISyntaxException {
@@ -93,13 +74,6 @@ public class DrugResource {
             .body(result);
     }
 
-    /**
-     * GET  /drugs : get all the drugs.
-     *
-     * @param pageable the pagination information
-     * @param eagerload flag to eager load entities from relationships (This is applicable for many-to-many)
-     * @return the ResponseEntity with status 200 (OK) and the list of drugs in body
-     */
     @GetMapping("/drugs")
     @Timed
     public ResponseEntity<List<Drug>> getAllDrugs(Pageable pageable, @RequestParam(required = false, defaultValue = "false") boolean eagerload) {
@@ -124,12 +98,6 @@ public class DrugResource {
             .collect(Collectors.toList()));
     }
 
-    /**
-     * GET  /drugs/:id : get the "id" drug.
-     *
-     * @param id the id of the drug to retrieve
-     * @return the ResponseEntity with status 200 (OK) and with body the drug, or with status 404 (Not Found)
-     */
     @GetMapping("/drugs/{id}")
     @Timed
     public ResponseEntity<Drug> getDrug(@PathVariable Long id) {
@@ -138,12 +106,6 @@ public class DrugResource {
         return ResponseUtil.wrapOrNotFound(drug);
     }
 
-    /**
-     * DELETE  /drugs/:id : delete the "id" drug.
-     *
-     * @param id the id of the drug to delete
-     * @return the ResponseEntity with status 200 (OK)
-     */
     @DeleteMapping("/drugs/{id}")
     @Timed
     public ResponseEntity<Void> deleteDrug(@PathVariable Long id) {

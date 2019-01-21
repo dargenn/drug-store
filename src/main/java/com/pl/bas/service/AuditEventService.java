@@ -11,11 +11,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.time.Instant;
 import java.util.Optional;
 
-/**
- * Service for managing audit events.
- * <p>
- * This is the default implementation to support SpringBoot Actuator AuditEventRepository
- */
 @Service
 @Transactional
 public class AuditEventService {

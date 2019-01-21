@@ -13,9 +13,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
-/**
- * Service Implementation for managing Producer.
- */
 @Service
 @Transactional
 public class ProducerServiceImpl implements ProducerService {
@@ -28,24 +25,12 @@ public class ProducerServiceImpl implements ProducerService {
         this.producerRepository = producerRepository;
     }
 
-    /**
-     * Save a producer.
-     *
-     * @param producer the entity to save
-     * @return the persisted entity
-     */
     @Override
     public Producer save(Producer producer) {
         log.debug("Request to save Producer : {}", producer);
         return producerRepository.save(producer);
     }
 
-    /**
-     * Get all the producers.
-     *
-     * @param pageable the pagination information
-     * @return the list of entities
-     */
     @Override
     @Transactional(readOnly = true)
     public Page<Producer> findAll(Pageable pageable) {
@@ -54,12 +39,6 @@ public class ProducerServiceImpl implements ProducerService {
     }
 
 
-    /**
-     * Get one producer by id.
-     *
-     * @param id the id of the entity
-     * @return the entity
-     */
     @Override
     @Transactional(readOnly = true)
     public Optional<Producer> findOne(Long id) {
@@ -67,11 +46,6 @@ public class ProducerServiceImpl implements ProducerService {
         return producerRepository.findById(id);
     }
 
-    /**
-     * Delete the producer by id.
-     *
-     * @param id the id of the entity
-     */
     @Override
     public void delete(Long id) {
         log.debug("Request to delete Producer : {}", id);

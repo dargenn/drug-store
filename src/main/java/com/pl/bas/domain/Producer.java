@@ -7,9 +7,6 @@ import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.util.Objects;
 
-/**
- * A Producer.
- */
 @Entity
 @Table(name = "producer")
 public class Producer implements Serializable {

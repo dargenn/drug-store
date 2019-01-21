@@ -8,9 +8,6 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 
-/**
- * An authority (a security role) used by Spring Security.
- */
 @Entity
 @Table(name = "jhi_authority")
 public class Authority implements Serializable {

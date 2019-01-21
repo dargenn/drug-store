@@ -2,9 +2,6 @@ package com.pl.bas.web.rest.vm;
 
 import ch.qos.logback.classic.Logger;
 
-/**
- * View Model object for storing a Logback logger.
- */
 public class LoggerVM {
 
     private String name;

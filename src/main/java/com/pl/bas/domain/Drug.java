@@ -15,9 +15,6 @@ import com.pl.bas.domain.enumeration.Form;
 
 import com.pl.bas.domain.enumeration.Rating;
 
-/**
- * A Drug.
- */
 @Entity
 @Table(name = "drug")
 public class Drug implements Serializable {

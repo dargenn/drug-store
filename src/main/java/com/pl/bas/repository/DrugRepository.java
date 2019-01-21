@@ -10,9 +10,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.Optional;
 
-/**
- * Spring Data  repository for the Drug entity.
- */
 @SuppressWarnings("unused")
 @Repository
 public interface DrugRepository extends JpaRepository<Drug, Long> {
