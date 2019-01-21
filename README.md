@@ -9,7 +9,7 @@ Modelowanie i implementacja aplikacji biznesowych
 
 ## Docker
 ```
-mvnw package -Pprod verify jib:dockerBuild
+mvnw package -Pdev verify jib:dockerBuild
 ```
 
 ```
