@@ -4,7 +4,7 @@ services:
         image: drugstore
         environment:
             - _JAVA_OPTIONS=-Xmx512m -Xms256m
-            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_PROFILES_ACTIVE=dev,swagger
             - SPRING_DATASOURCE_URL=jdbc:postgresql://drugstore-postgresql:5432/drugstore
             - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
         ports:
